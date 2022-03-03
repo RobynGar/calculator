@@ -10,15 +10,23 @@ const multiply = (a,b) =>a*b;
 
 const divide = (a, b) => {
     if(a === 0 || b === 0){
-        return null;
+        return NaN;
     } else {
-    return a / b
+    return a / b;
     }
 };
 
-const modulus = null;
+const modulus = function(a,b){
+    return a%b;
+};
 
-const even = null;
+const even = (a) => {
+    if(a%2===0){
+        return true;
+    }else{
+        return false;
+    }
+}
 
 const odd = null;
 

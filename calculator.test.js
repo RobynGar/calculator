@@ -113,7 +113,7 @@ describe('divide', () => {
   });
 
   test('can divide when one number is 0', () => {
-    expected = null;
+    expected = NaN;
     actual = divide(10, 0);
     expect(actual).toBe(expected);
   });
@@ -121,11 +121,57 @@ describe('divide', () => {
 });
 
 describe('modulus', () => {
+  test('the modulus of two small positive numbers', () => {
+    expected = 3;
+    actual = modulus(13, 5);
+    expect(actual).toBe(expected);
+  });
+
+  test('the modulus of two large positive numbers', () => {
+    expected = 3;
+    actual = modulus(203, 100);
+    expect(actual).toBe(expected);
+  });
+
+  test('the modulus of two negative numbers', () => {
+    expected = -3;
+    actual = modulus(-13, -5);
+    expect(actual).toBe(expected);
+  });
+
+  test('the modulus of one number is 0', () => {
+    expected = NaN;
+    actual = modulus(10, 0);
+    expect(actual).toBe(expected);
+  });
 
 });
 
 describe('even', () => {
 
+  test('a even small number', () => {
+    expected = true;
+    actual = even(4);
+    expect(actual).toBe(expected);
+  });
+
+  test('a large even number', () => {
+    expected = true;
+    actual = even(100);
+    expect(actual).toBe(expected);
+  });
+
+  test('a even negative number', () => {
+    expected = true;
+    actual = even(-10);
+    expect(actual).toBe(expected);
+  });
+
+  test('number is 0', () => {
+    expected = true;
+    actual = even(10, 0);
+    expect(actual).toBe(expected);
+  });
 });
 
 describe('odd', () => {
