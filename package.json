@@ -1,7 +1,6 @@
 {
   "name": "jestunittesting",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -12,5 +11,14 @@
   "license": "ISC",
   "devDependencies": {
     "jest": "^27.2.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobynGar/calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RobynGar/calculator/issues"
+  },
+  "homepage": "https://github.com/RobynGar/calculator#readme",
+  "description": ""
 }
