@@ -169,11 +169,47 @@ describe('even', () => {
 
   test('number is 0', () => {
     expected = true;
-    actual = even(10, 0);
+    actual = even(0);
+    expect(actual).toBe(expected);
+  });
+
+  test('a odd number', () => {
+    expected = false;
+    actual = even(5);
     expect(actual).toBe(expected);
   });
 });
 
 describe('odd', () => {
+
+  test('a even number', () => {
+    expected = false;
+    actual = odd(4);
+    expect(actual).toBe(expected);
+  });
+
+  test('a small odd number', () => {
+    expected = true;
+    actual = odd(7);
+    expect(actual).toBe(expected);
+  });
+
+  test('a large odd number', () => {
+    expected = true;
+    actual = odd(53687);
+    expect(actual).toBe(expected);
+  });
+
+  test('a negative odd number', () => {
+    expected = true;
+    actual = odd(-11);
+    expect(actual).toBe(expected);
+  });
+
+  test('a 0', () => {
+    expected = false;
+    actual = odd(0);
+    expect(actual).toBe(expected);
+  });
 
 });

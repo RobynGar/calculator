@@ -28,7 +28,13 @@ const even = (a) => {
     }
 }
 
-const odd = null;
+const odd = (a) => {
+    if(a%2===0){
+        return false;
+    }else{
+        return true;
+    }
+};
 
 module.exports = { 
     sum, 
