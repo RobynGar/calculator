@@ -118,6 +118,12 @@ describe('divide', () => {
     expect(actual).toBe(expected);
   });
 
+  test('can divide by decimals', () => {
+    expected = 2;
+    actual = divide(1, 0.5);
+    expect(actual).toBe(expected);
+  });
+
 });
 
 describe('modulus', () => {
