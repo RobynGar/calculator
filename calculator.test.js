@@ -67,6 +67,29 @@ describe('subtract', () => {
 
 describe('multiply', () => {
 
+  test('can multiply two small positive numbers', () => {
+    expected = 5;
+    actual = multiply(1, 5);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply two large positive numbers', () => {
+    expected = 5000;
+    actual = multiply(100, 50);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply two negative numbers', () => {
+    expected = 137216;
+    actual = multiply(-268, -512);
+    expect(actual).toBe(expected);
+  });
+
+  test('can multiply when one number is 0', () => {
+    expected = 0;
+    actual = multiply(10, 0);
+    expect(actual).toBe(expected);
+  });
 });
 
 describe('divide', () => {
